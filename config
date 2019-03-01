@@ -17,7 +17,7 @@ set $mod Mod4
 font pango:monospace 8
 
 #set keyboard layout: 
-#exec_always "setxkbmap -model pc104 -layout pl,ru -variant ,, -option grp:alt_shift_toggle"
+exec_always "setxkbmap -model pc104 -layout pl,ru -variant ,, -option grp:alt_shift_toggle"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -170,9 +170,7 @@ bindsym XF86AudioRaiseVolume exec amixer -c 1 set Master 5%+; exec notify-send "
 bindsym XF86AudioLowerVolume exec amixer -c 1 set Master 5%-; exec notify-send "Audio volume -5%"
 
 #brightness setting
-
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-#; exec getBrightness.sh
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec ~/.congig/i3/getBrightness.sh
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-send "Brightness -10%"
 
 #resize window
